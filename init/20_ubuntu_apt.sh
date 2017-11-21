@@ -50,22 +50,11 @@ apt_packages+=(
 apt_packages+=(vim)
 is_ubuntu_desktop && apt_packages+=(vim-gnome)
 
-# https://launchpad.net/~stebbins/+archive/ubuntu/handbrake-releases
-add_ppa ppa:stebbins/handbrake-releases
-apt_packages+=(handbrake-cli)
-is_ubuntu_desktop && apt_packages+=(handbrake-gtk)
-
 # https://github.com/rbenv/ruby-build/wiki
 apt_packages+=(
   autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev
   libncurses5-dev libffi-dev libgdbm3 libgdbm-dev zlib1g-dev
 )
-
-# https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-ansible-on-ubuntu-16-04
-add_ppa ppa:ansible/ansible
-apt_packages+=(ansible)
-
-
 
 function other_stuff() {
   # Install Git Extras
